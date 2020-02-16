@@ -1,0 +1,5 @@
+prod <- read.csv(file.choose(), header=T)
+model <- lm(y ~ x1, data=prod)
+new.data <- data.frame(x1 = 275)
+predict(model, newdata=new.data, interval = 'confidence')
+predict(model, newdata=new.data, interval = 'predict')
